@@ -1,42 +1,187 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head><script src="/YOUR-REPO/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=YOUR-REPO/livereload" data-no-instant defer></script>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello World · My Hugo Site</title>
-  <link rel="stylesheet" href="/YOUR-REPO/css/style.css">
+  <title>Weclome to my website! · Fjalltoppen</title>
+<meta name="description" content="Fjalltoppen — personal site: research, art, projects, and writing.">
+<link rel="canonical" href="http://localhost:1313/posts/hello-world/">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weclome to my website!">
+<meta property="og:description" content="Fjalltoppen — personal site: research, art, projects, and writing.">
+<meta property="og:url" content="http://localhost:1313/posts/hello-world/">
+<meta property="og:site_name" content="Fjalltoppen">
+<meta property="og:image" content="http://localhost:1313/og-image.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Weclome to my website!">
+<meta name="twitter:description" content="Fjalltoppen — personal site: research, art, projects, and writing.">
+<meta name="twitter:image" content="http://localhost:1313/og-image.png">
+
+
+<link rel="icon" href="http://localhost:1313/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/favicon.svg">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  
+  <script data-goatcounter="https://blockedbyjames.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  
 </head>
 <body>
   <header class="site-header">
-  <div class="container">
-    <a class="site-title" href="/">My Hugo Site</a>
-    <nav>
-      
-        <a href="/YOUR-REPO/">Home</a>
-      
-        <a href="/YOUR-REPO/posts/">Posts</a>
-      
-    </nav>
+  <div class="contour-band" aria-hidden="true">
+    <svg viewBox="0 0 1200 90" preserveAspectRatio="none">
+      <path class="contour-line c1" d="M0,60 C150,20 300,80 450,45 C600,10 750,70 900,40 C1000,20 1100,55 1200,35" />
+      <path class="contour-line c2" d="M0,72 C160,40 320,88 470,58 C630,28 780,80 920,52 C1030,32 1120,64 1200,48" />
+      <path class="contour-line c3" d="M0,84 C170,58 330,95 480,72 C640,48 790,90 930,66 C1040,50 1130,74 1200,60" />
+    </svg>
+  </div>
+  <div class="container header-row">
+    <a class="site-title" href="/">Fjalltoppen</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav-panel" id="navPanel" aria-hidden="true" aria-label="Site navigation">
+  <button type="button" class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+  <div class="nav-panel-inner">
+    <span class="nav-eyebrow">Menu</span>
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/about/">About</a></li>
+      
+        <li><a href="/research/">Research</a></li>
+      
+        <li><a href="/art/">Art</a></li>
+      
+        <li><a href="/inspiration/">Inspiration</a></li>
+      
+        <li><a href="/posts/">Blog</a></li>
+      
+        <li><a href="/tags/">Tags</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var closeBtn = document.getElementById('navClose');
+  var panel = document.getElementById('navPanel');
+  var overlay = document.getElementById('navOverlay');
+
+  function openNav() {
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    toggle.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    panel.setAttribute('aria-hidden', 'false');
+  }
+  function closeNav() {
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    panel.setAttribute('aria-hidden', 'true');
+  }
+  toggle.addEventListener('click', function () {
+    if (panel.classList.contains('open')) { closeNav(); } else { openNav(); }
+  });
+  closeBtn.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeNav(); }
+  });
+})();
+</script>
 
   <main class="container">
     
   <article>
-    <h1>Hello World</h1>
+    <h1>Weclome to my website!</h1>
     <p class="post-date">August 22, 2026</p>
     <p>This is your first post. Edit or delete it in <code>content/posts/hello-world.md</code>,
 then add new posts with:</p>
 <pre tabindex="0"><code>hugo new content posts/my-post.md
 </code></pre>
+    
+      <p class="tag-list">
+        <a class="tag" href="/tags/meta/">#Meta</a>
+      </p>
+    
   </article>
+  
+    
+<section class="comments">
+  <script src="https://giscus.app/client.js"
+    data-repo="rtmcginnis18/Fjalltoppen"
+    data-repo-id="R_kgDOUFkY-Q"
+    data-category="General"
+    data-category-id="DIC_kwDOUFkY-c4DESXk"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="dark_dimmed"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+
+
+  
 
   </main>
   <footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2026 My Hugo Site. Built with Hugo.</p>
+  <div class="contour-band contour-band-footer" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path class="contour-line c1" d="M0,10 C150,40 300,5 450,30 C600,55 750,15 900,35 C1000,48 1100,22 1200,38" />
+      <path class="contour-line c2" d="M0,22 C160,48 320,14 470,40 C630,64 780,26 920,46 C1030,58 1120,34 1200,48" />
+    </svg>
+  </div>
+  <div class="container footer-row">
+    <span>&copy; 2026 Fjalltoppen</span>
+
+    
+    <div class="social-links">
+      
+      <a href="https://www.linkedin.com/in/rtmcginnis" target="_blank" rel="me noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      
+      
+      <a href="https://scholar.google.com/citations?user=6YPD0iMAAAAJ&amp;hl=en" target="_blank" rel="me noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l4 2.5V17l7 4 7-4v-5.5L21 10v6h1.5V9L12 2zm0 2.35L18.8 9 12 13.15 5.2 9 12 4.35zM7 12.9l5 3.1 5-3.1v3.2l-5 2.9-5-2.9v-3.2z"/></svg>
+      </a>
+      
+      
+      <a href="mailto:rmcginnis@berkeley.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      
+    </div>
+    
+
+    <span class="footer-tag">est. 2026 &middot; built with Hugo and Claude</span>
   </div>
 </footer>
-
 </body>
 </html>

@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>My Hugo Site</title>
-		<link>http://localhost:1313/YOUR-REPO/</link>
-		<description>Recent content on My Hugo Site</description>
+		<title>Fjalltoppen</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Fjalltoppen</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
 		
 		
 		
-			<lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/YOUR-REPO/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Hello World</title>
-				<link>http://localhost:1313/YOUR-REPO/posts/hello-world/</link>
-				<pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/YOUR-REPO/posts/hello-world/</guid>
-				<description>&lt;p&gt;This is your first post. Edit or delete it in &lt;code&gt;content/posts/hello-world.md&lt;/code&gt;,&#xA;then add new posts with:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new content posts/my-post.md&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+				<title>Movies</title>
+				<link>http://localhost:1313/inspiration/movies/</link>
+				<pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/inspiration/movies/</guid>
+				<description>&lt;p&gt;Interstellar, Hidden Figures, Pacific Rim, Oblivion&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>This page is WIP</title>
+				<link>http://localhost:1313/research/sample-entry/</link>
+				<pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/research/sample-entry/</guid>
+				<description>&lt;p&gt;Under construction&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Weclome to my website!</title>
+				<link>http://localhost:1313/posts/welcome/</link>
+				<pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/welcome/</guid>
+				<description>&lt;p&gt;Hi everyone!&lt;/p&gt;&#xA;&lt;p&gt;Welcome to my website, fyi, it is still underconstruction.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new content posts/my-post.md&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>WIP</title>
+				<link>http://localhost:1313/art/sample-piece/</link>
+				<pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/art/sample-piece/</guid>
+				<description>&lt;p&gt;Under construction&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

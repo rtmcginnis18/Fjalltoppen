@@ -1,6 +1,29 @@
 baseURL = "https://fjalltoppen.com/"
-languageCode = "en-us"
-title = "My Hugo Site"
+locale = "en-us"
+title = "Fjalltoppen"
+enableRobotsTXT = true
+
+[params]
+  description = "Fjalltoppen — personal site: research, art, projects, and writing."
+  # Set this to your GoatCounter site code (the part before .goatcounter.com)
+  # to turn on the built-in visit counter. Leave blank to disable it.
+  goatCounterCode = "blockedbyjames"
+  # Fill these in after setting up giscus at https://giscus.app for this repo,
+  # using the values it generates for your exact repo/branch.
+  giscusRepo = "rtmcginnis18/Fjalltoppen"
+  giscusRepoId = "R_kgDOUFkY-Q"
+  giscusCategory = "General"
+  giscusCategoryId = "DIC_kwDOUFkY-c4DESXk"
+  # Socials
+  linkedin = "https://www.linkedin.com/in/rtmcginnis"
+  scholar = "https://scholar.google.com/citations?user=6YPD0iMAAAAJ&hl=en"
+  email = "rmcginnis@berkeley.edu"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    noClasses = false
+    lineNos = false
 
 [[menu.main]]
   name = "Home"
@@ -8,6 +31,31 @@ title = "My Hugo Site"
   weight = 1
 
 [[menu.main]]
-  name = "Posts"
-  url = "/posts/"
+  name = "About"
+  url = "/about/"
   weight = 2
+
+[[menu.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 3
+
+[[menu.main]]
+  name = "Art"
+  url = "/art/"
+  weight = 4
+
+[[menu.main]]
+  name = "Inspiration"
+  url = "/inspiration/"
+  weight = 5
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 6
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 7

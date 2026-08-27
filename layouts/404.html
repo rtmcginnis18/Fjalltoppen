@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · {{ .Site.Title }}</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main class="container">
+    <h1>404 — off the map</h1>
+    <p>Nothing's charted at this path. <a href="{{ "/" | relURL }}">Head back to the summit (home)</a>.</p>
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

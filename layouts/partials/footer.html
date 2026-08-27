@@ -1,5 +1,33 @@
 <footer class="site-footer">
-  <div class="container">
-    <p>&copy; {{ now.Year }} {{ .Site.Title }}. Built with Hugo.</p>
+  <div class="contour-band contour-band-footer" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path class="contour-line c1" d="M0,10 C150,40 300,5 450,30 C600,55 750,15 900,35 C1000,48 1100,22 1200,38" />
+      <path class="contour-line c2" d="M0,22 C160,48 320,14 470,40 C630,64 780,26 920,46 C1030,58 1120,34 1200,48" />
+    </svg>
+  </div>
+  <div class="container footer-row">
+    <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
+
+    {{ if or .Site.Params.linkedin .Site.Params.scholar .Site.Params.email }}
+    <div class="social-links">
+      {{ with .Site.Params.linkedin }}
+      <a href="{{ . }}" target="_blank" rel="me noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      {{ end }}
+      {{ with .Site.Params.scholar }}
+      <a href="{{ . }}" target="_blank" rel="me noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l4 2.5V17l7 4 7-4v-5.5L21 10v6h1.5V9L12 2zm0 2.35L18.8 9 12 13.15 5.2 9 12 4.35zM7 12.9l5 3.1 5-3.1v3.2l-5 2.9-5-2.9v-3.2z"/></svg>
+      </a>
+      {{ end }}
+      {{ with .Site.Params.email }}
+      <a href="mailto:{{ . }}" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <span class="footer-tag">est. 2026 &middot; built with Hugo and Claude</span>
   </div>
 </footer>

@@ -1,10 +1,62 @@
 <header class="site-header">
-  <div class="container">
+  <div class="contour-band" aria-hidden="true">
+    <svg viewBox="0 0 1200 90" preserveAspectRatio="none">
+      <path class="contour-line c1" d="M0,60 C150,20 300,80 450,45 C600,10 750,70 900,40 C1000,20 1100,55 1200,35" />
+      <path class="contour-line c2" d="M0,72 C160,40 320,88 470,58 C630,28 780,80 920,52 C1030,32 1120,64 1200,48" />
+      <path class="contour-line c3" d="M0,84 C170,58 330,95 480,72 C640,48 790,90 930,66 C1040,50 1130,74 1200,60" />
+    </svg>
+  </div>
+  <div class="container header-row">
     <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-    <nav>
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Open menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav-panel" id="navPanel" aria-hidden="true" aria-label="Site navigation">
+  <button type="button" class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+  <div class="nav-panel-inner">
+    <span class="nav-eyebrow">Menu</span>
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var closeBtn = document.getElementById('navClose');
+  var panel = document.getElementById('navPanel');
+  var overlay = document.getElementById('navOverlay');
+
+  function openNav() {
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    toggle.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    panel.setAttribute('aria-hidden', 'false');
+  }
+  function closeNav() {
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    panel.setAttribute('aria-hidden', 'true');
+  }
+  toggle.addEventListener('click', function () {
+    if (panel.classList.contains('open')) { closeNav(); } else { openNav(); }
+  });
+  closeBtn.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeNav(); }
+  });
+})();
+</script>

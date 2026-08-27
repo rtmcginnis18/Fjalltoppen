@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Tags on My Hugo Site</title>
-		<link>http://localhost:1313/YOUR-REPO/tags/</link>
-		<description>Recent content in Tags on My Hugo Site</description>
+		<title>Tags on Fjalltoppen</title>
+		<link>http://localhost:1313/tags/</link>
+		<description>Recent content in Tags on Fjalltoppen</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
 		
 		
 		
-			<atom:link href="http://localhost:1313/YOUR-REPO/tags/index.xml" rel="self" type="application/rss+xml" />
+			<lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Meta</title>
+				<link>http://localhost:1313/tags/meta/</link>
+				<pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/meta/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>
