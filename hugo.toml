@@ -1,0 +1,13 @@
+baseURL = "https://YOUR-USERNAME.github.io/YOUR-REPO/"
+languageCode = "en-us"
+title = "My Hugo Site"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
